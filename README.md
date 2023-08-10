@@ -1,18 +1,18 @@
-<a href="https://gubchik123-weather-app.netlify.app" target="_blank"><img title="Vue calculator" alt="Header image" src="./src/assets/header.png"></a>
+<a href="https://gubchik123-weather.netlify.app" target="_blank"><img title="Vue calculator" alt="Header image" src="./src/assets/header.png"></a>
 _Static landing page: weather app with Vue.js_
 
 ## Demo
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/adac3b81-daa3-4776-b5f7-96423b05c98b/deploy-status)](https://app.netlify.com/sites/gubchik123-weather-app/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/adac3b81-daa3-4776-b5f7-96423b05c98b/deploy-status)](https://app.netlify.com/sites/gubchik123-weather/deploys)
 
-Click **<a href="https://gubchik123-weather-app.netlify.app" target="_blank">here</a>** to open my weather app
+Click **<a href="https://gubchik123-weather.netlify.app" target="_blank">here</a>** to open my weather app
 
-<a href="https://gubchik123-weather-app.netlify.app" target="_blank"><img title="Demo light theme" alt="Demo light theme image" src="./public/demo-en.jpg"></a>
+<a href="https://gubchik123-weather.netlify.app" target="_blank"><img title="Demo light theme" alt="Demo light theme image" src="./public/demo-en.jpg"></a>
 
 ### Translation into Ukrainian
 
 There is the ability to switch the page into Ukrainian.
-<a href="https://gubchik123-weather-app.netlify.app" target="_blank"><img title="Demo dark theme" alt="Demo dark theme image" src="./public/demo-ua.jpg"></a>
+<a href="https://gubchik123-weather.netlify.app" target="_blank"><img title="Demo dark theme" alt="Demo dark theme image" src="./public/demo-ua.jpg"></a>
 
 This template should help get you started developing with Vue 3 in Vite.
 
