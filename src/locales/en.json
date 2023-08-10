@@ -1,0 +1,13 @@
+{
+    "weather_in": "Weather in",
+    "weather_icon": "Weather icon",
+    "weather_app": "Weather app",
+    "label_city_name": "City name",
+    "btn_get_weather": "Get weather",
+    "weather_details": "Weather details",
+    "wind": "Wind",
+    "km_h": "km/h",
+    "humidity": "Humidity",
+    "pressure": "Pressure",
+    "hPa": "hPa"
+}

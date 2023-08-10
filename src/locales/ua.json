@@ -1,0 +1,13 @@
+{
+    "weather_in": "Погода в",
+    "weather_icon": "Іконка погоди",
+    "weather_app": "Погодний додаток",
+    "label_city_name": "Назва міста",
+    "btn_get_weather": "Отримати погоду",
+    "weather_details": "Деталі погоди",
+    "wind": "Вітер",
+    "km_h": "км/год",
+    "humidity": "Вологість",
+    "pressure": "Тиск",
+    "hPa": "гПа"
+}
