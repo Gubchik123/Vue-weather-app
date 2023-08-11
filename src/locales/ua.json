@@ -9,5 +9,12 @@
     "km_h": "км/год",
     "humidity": "Вологість",
     "pressure": "Тиск",
-    "hPa": "гПа"
+    "hPa": "гПа",
+    "error_messages": {
+        "city_name_required": "Введіть назву міста",
+        "city_name_too_short": "Назва міста занадто коротка",
+        "city_name_too_long": "Назва міста занадто довга",
+        "lang_invalid": "Невірна мова",
+        "city_not_found": "Місто не знайдено"
+    }
 }

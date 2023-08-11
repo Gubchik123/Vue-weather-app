@@ -9,5 +9,12 @@
     "km_h": "km/h",
     "humidity": "Humidity",
     "pressure": "Pressure",
-    "hPa": "hPa"
+    "hPa": "hPa",
+    "error_messages": {
+        "city_name_required": "Enter city name",
+        "city_name_too_short": "City name is too short",
+        "city_name_too_long": "City name is too long",
+        "lang_invalid": "Invalid language",
+        "city_not_found": "City not found"
+    }
 }

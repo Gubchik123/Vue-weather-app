@@ -44,17 +44,21 @@
                         </template>
                         <h2 v-else class="mb-4">{{ t("weather_app") }}</h2>
                         <!-- Form -->
-                        <div class="form-floating mb-3 text-dark">
+                        <div class="form-floating text-dark" :class="{ 'mb-3': !error_message }">
                             <input
-                                v-model.lazy="city"
+                                v-model.lazy.trim="city"
                                 @keyup.enter="get_weather"
-                                @input="weather = null"
+                                @input="input"
                                 type="text"
                                 id="city_input"
                                 class="form-control"
                                 :placeholder="t('label_city_name')"
                             />
                             <label for="city_input">{{ t("label_city_name") }}</label>
+                        </div>
+                        <!-- Error message -->
+                        <div v-if="error_message" class="text-sm text-white bg-danger mb-3">
+                            {{ error_message }}
                         </div>
                         <button @click="get_weather" class="btn btn-primary">
                             {{ t("btn_get_weather") }}
@@ -93,6 +97,7 @@ export default {
             lang: "en",
             city: "",
             result_city: "",
+            error_message: "",
             locale: {},
             weather: null
         }
@@ -108,6 +113,14 @@ export default {
             this.locale = get_locale(this.lang)
         }
     },
+    computed: {
+        city_patters() {
+            return {
+                en: /^[a-zA-Z\s]+$/,
+                ua: /^[а-яА-ЯіЇґє\s]+$/
+            }
+        },
+    },
     methods: {
         change_lang() {
             this.lang = this.lang === "en" ? "ua" : "en"
@@ -115,12 +128,33 @@ export default {
         t(key) {
             return this.locale[key]
         },
+        input() {
+            this.weather = null
+            this.error_message = ""
+        },
         get_weather() {
-            get_weather_json(this.city, this.lang).then((response) => {
-                this.weather = response
-            })
+            if (!this._is_valid_city()) {
+                this.error_message = this.t("error_messages")[this.error_message]
+                return
+            }
+            get_weather_json(this.city, this.lang)
+                .then((response) => {
+                    this.weather = response
+                })
+                .catch((error) => {
+                    this.error_message = this.t("error_messages")[error.message]
+                })
             this.result_city = this.city
             this.city = ""
+        },
+        _is_valid_city() {
+            if (!this.city) this.error_message = "city_name_required"
+            else if (this.city.length < 3) this.error_message = "city_name_too_short"
+            else if (this.city.length > 25) this.error_message = "city_name_too_long"
+            else if (!this.city_patters[this.lang].test(this.city))
+                this.error_message = "lang_invalid"
+            else this.error_message = ""
+            return this.error_message ? false : true
         }
     }
 }
