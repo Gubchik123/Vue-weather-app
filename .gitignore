@@ -4,6 +4,9 @@ logs
 
 node_modules
 
+.eslintrc.cjs
+.prettierrc.json
+
 .env
 
 # Editor directories and files

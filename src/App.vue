@@ -105,7 +105,6 @@ export default {
     created() {
         this.lang = localStorage.getItem("lang") || "en"
         this.locale = get_locale(this.lang)
-        this.weather = null
     },
     watch: {
         lang() {
